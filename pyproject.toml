@@ -1,0 +1,25 @@
+[project]
+name = "polygon-area-calculator"
+version = "1.0.0"
+description = "A Python utility for computing area, perimeter, diagonal length, ASCII drawings, and packing calculations for rectangles and squares."
+authors = [
+    { name = "TheComputationalCore" }
+]
+license = { file = "LICENSE" }
+readme = "README.md"
+requires-python = ">=3.8"
+
+dependencies = []
+
+[project.urls]
+Homepage = "https://github.com/TheComputationalCore/Polygon-Area-Calculator"
+Documentation = "https://thecomputationalcore.github.io/Polygon-Area-Calculator"
+Source = "https://github.com/TheComputationalCore/Polygon-Area-Calculator"
+Issues = "https://github.com/TheComputationalCore/Polygon-Area-Calculator/issues"
+
+[project.scripts]
+polygon-calculator = "polygon_calculator.cli:main"
+
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
