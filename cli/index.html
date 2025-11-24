@@ -362,8 +362,58 @@
 <hr />
 <h2 id="running-the-cli">▶️ Running the CLI<a class="headerlink" href="#running-the-cli" title="Permanent link">&para;</a></h2>
 <p>After installing the project (<code>pip install .</code>), run:</p>
-<p>```bash
-polygon-calculator --help</p>
+<div class="codehilite"><pre><span></span><code>polygon-calculator<span class="w"> </span>--help
+</code></pre></div>
+
+<hr />
+<h1 id="rectangle-mode">📐 Rectangle Mode<a class="headerlink" href="#rectangle-mode" title="Permanent link">&para;</a></h1>
+<p>Compute properties of a rectangle:</p>
+<div class="codehilite"><pre><span></span><code>polygon-calculator<span class="w"> </span>--rectangle<span class="w"> </span><span class="m">10</span><span class="w"> </span><span class="m">5</span>
+</code></pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><code>Rectangle(width=10, height=5)
+Area: 50
+Perimeter: 30
+Diagonal: 11.18
+Picture:
+**********
+**********
+**********
+**********
+**********
+</code></pre></div>
+
+<hr />
+<h1 id="square-mode">🟥 Square Mode<a class="headerlink" href="#square-mode" title="Permanent link">&para;</a></h1>
+<p>Compute properties of a square:</p>
+<div class="codehilite"><pre><span></span><code>polygon-calculator<span class="w"> </span>--square<span class="w"> </span><span class="m">7</span>
+</code></pre></div>
+
+<p>Output:</p>
+<div class="codehilite"><pre><span></span><code>Square(side=7)
+Area: 49
+Perimeter: 28
+Diagonal: 9.89
+Picture:
+*******
+*******
+*******
+*******
+*******
+*******
+*******
+</code></pre></div>
+
+<hr />
+<h2 id="notes">📄 Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h2>
+<ul>
+<li>All numeric inputs are automatically converted to floats  </li>
+<li>ASCII art drawing is limited to shapes ≤ 50×50  </li>
+<li>If no arguments are provided, help text is shown  </li>
+</ul>
+<hr />
+<p>Happy computing! 🚀</p>
 
 
 
