@@ -5,20 +5,23 @@ from .square import Square
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Polygon Area Calculator — compute area, perimeter, diagonal, and more for rectangles and squares."
+        description=(
+            "Polygon Area Calculator — compute area, perimeter, diagonal, "
+            "and ASCII representations for rectangles and squares."
+        )
     )
 
     parser.add_argument(
         "--rectangle",
         nargs=2,
         metavar=("WIDTH", "HEIGHT"),
-        help="Compute properties of a rectangle",
+        help="Compute properties of a rectangle.",
     )
 
     parser.add_argument(
         "--square",
         metavar="SIDE",
-        help="Compute properties of a square",
+        help="Compute properties of a square.",
     )
 
     args = parser.parse_args()
@@ -47,5 +50,4 @@ def main():
         print(sq.get_picture())
         return
 
-    # No arguments
     parser.print_help()
