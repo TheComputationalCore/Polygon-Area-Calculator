@@ -128,12 +128,6 @@ See **CONTRIBUTING.md** for full workflow and guidelines.
 
 ## 🔐 Security
 
-Found a security issue?  
-## ✉️ Contact
-
-**Dinesh Chandra — TheComputationalCore**  
-- GitHub: https://github.com/TheComputationalCore 
-
 More details in **SECURITY.md**
 
 ---
