@@ -1,0 +1,529 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://thecomputationalcore.github.io/Polygon-Area-Calculator/api/">
+      
+      
+        <link rel="prev" href="../usage/">
+      
+      
+        <link rel="next" href="../examples/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+    
+    
+      
+        <title>API Reference - Polygon Area Calculator</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.618322db.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="light-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#api-reference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Polygon Area Calculator" class="md-header__button md-logo" aria-label="Polygon Area Calculator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Polygon Area Calculator
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              API Reference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Polygon Area Calculator" class="md-nav__button md-logo" aria-label="Polygon Area Calculator" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Polygon Area Calculator
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usage
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    API Reference
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../examples/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="api-reference">📚 API Reference<a class="headerlink" href="#api-reference" title="Permanent link">&para;</a></h1>
+<p>This page provides detailed documentation for all classes and methods in the <strong>Polygon Area Calculator</strong> project.</p>
+<hr />
+<h1 id="rectangle">🟦 Rectangle<a class="headerlink" href="#rectangle" title="Permanent link">&para;</a></h1>
+<p>The <code>Rectangle</code> class represents a simple rectangle defined by its width and height.</p>
+<h2 id="constructor"><strong>Constructor</strong><a class="headerlink" href="#constructor" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">Rectangle</span><span class="p">(</span><span class="n">width</span><span class="p">,</span> <span class="n">height</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="parameters">Parameters:<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>width</strong> (<code>int</code> or <code>float</code>)</li>
+<li><strong>height</strong> (<code>int</code> or <code>float</code>)</li>
+</ul>
+<hr />
+<h2 id="methods"><strong>Methods</strong><a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="set_widthwidth">🔹 <code>set_width(width)</code><a class="headerlink" href="#set_widthwidth" title="Permanent link">&para;</a></h3>
+<p>Sets a new width.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">rect</span><span class="o">.</span><span class="n">set_width</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="set_heightheight">🔹 <code>set_height(height)</code><a class="headerlink" href="#set_heightheight" title="Permanent link">&para;</a></h3>
+<p>Sets a new height.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">rect</span><span class="o">.</span><span class="n">set_height</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="get_area">🔹 <code>get_area()</code><a class="headerlink" href="#get_area" title="Permanent link">&para;</a></h3>
+<p>Returns the area of the rectangle.</p>
+<div class="codehilite"><pre><span></span><code>width * height
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">rect</span><span class="o">.</span><span class="n">get_area</span><span class="p">()</span>
+</code></pre></div>
+
+<h3 id="get_perimeter">🔹 <code>get_perimeter()</code><a class="headerlink" href="#get_perimeter" title="Permanent link">&para;</a></h3>
+<p>Returns the perimeter.</p>
+<div class="codehilite"><pre><span></span><code><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">width</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">height</span>
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">rect</span><span class="o">.</span><span class="n">get_perimeter</span><span class="p">()</span>
+</code></pre></div>
+
+<h3 id="get_diagonal">🔹 <code>get_diagonal()</code><a class="headerlink" href="#get_diagonal" title="Permanent link">&para;</a></h3>
+<p>Returns the diagonal length based on the Pythorean theorem.</p>
+<div class="codehilite"><pre><span></span><code>(width² + height²) ** 0.5
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">rect</span><span class="o">.</span><span class="n">get_diagonal</span><span class="p">()</span>
+</code></pre></div>
+
+<h3 id="get_picture">🔹 <code>get_picture()</code><a class="headerlink" href="#get_picture" title="Permanent link">&para;</a></h3>
+<p>Returns an ASCII-art representation of the rectangle using <code>*</code> characters.</p>
+<ul>
+<li>If width or height is greater than <strong>50</strong>, returns:
+  <code>Too big for picture.</code></li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="n">rect</span><span class="o">.</span><span class="n">get_picture</span><span class="p">())</span>
+</code></pre></div>
+
+<h3 id="get_amount_insideshape">🔹 <code>get_amount_inside(shape)</code><a class="headerlink" href="#get_amount_insideshape" title="Permanent link">&para;</a></h3>
+<p>Returns how many times another shape can fit inside the rectangle.</p>
+<p>Measured using <em>integer</em> division:</p>
+<div class="codehilite"><pre><span></span><code>(self.width // shape.width) * (self.height // shape.height)
+</code></pre></div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">rect</span><span class="o">.</span><span class="n">get_amount_inside</span><span class="p">(</span><span class="n">sq</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="__str__">🔹 <code>__str__()</code><a class="headerlink" href="#__str__" title="Permanent link">&para;</a></h3>
+<p>String representation of the rectangle:</p>
+<div class="codehilite"><pre><span></span><code>Rectangle(width=10, height=5)
+</code></pre></div>
+
+<hr />
+<h1 id="square">🟥 Square<a class="headerlink" href="#square" title="Permanent link">&para;</a></h1>
+<p>The <code>Square</code> class is a subclass of <code>Rectangle</code>, where both width and height remain equal.</p>
+<h2 id="constructor_1"><strong>Constructor</strong><a class="headerlink" href="#constructor_1" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="n">Square</span><span class="p">(</span><span class="n">side</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="parameter">Parameter:<a class="headerlink" href="#parameter" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>side</strong> (<code>int</code> or <code>float</code>)</li>
+</ul>
+<hr />
+<h2 id="methods_1"><strong>Methods</strong><a class="headerlink" href="#methods_1" title="Permanent link">&para;</a></h2>
+<h3 id="set_sideside">🔹 <code>set_side(side)</code><a class="headerlink" href="#set_sideside" title="Permanent link">&para;</a></h3>
+<p>Sets both width and height to the same value.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">sq</span><span class="o">.</span><span class="n">set_side</span><span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+</code></pre></div>
+
+<h3 id="set_widthwidth-overridden">🔹 <code>set_width(width)</code> <em>(overridden)</em><a class="headerlink" href="#set_widthwidth-overridden" title="Permanent link">&para;</a></h3>
+<p>Ensures width and height remain equal.</p>
+<h3 id="set_heightheight-overridden">🔹 <code>set_height(height)</code> <em>(overridden)</em><a class="headerlink" href="#set_heightheight-overridden" title="Permanent link">&para;</a></h3>
+<p>Ensures width and height remain equal.</p>
+<h3 id="__str___1">🔹 <code>__str__()</code><a class="headerlink" href="#__str___1" title="Permanent link">&para;</a></h3>
+<p>String representation of a square:</p>
+<div class="codehilite"><pre><span></span><code>Square(side=5)
+</code></pre></div>
+
+<hr />
+<h1 id="class-relationship-diagram">🧱 Class Relationship Diagram<a class="headerlink" href="#class-relationship-diagram" title="Permanent link">&para;</a></h1>
+<div class="codehilite"><pre><span></span><code> Rectangle
+    ▲
+    │ (inherits)
+    │
+ Square
+</code></pre></div>
+
+<hr />
+<h1 id="notes">🧩 Notes<a class="headerlink" href="#notes" title="Permanent link">&para;</a></h1>
+<ul>
+<li>All geometric calculations return numeric values.</li>
+<li>ASCII drawing uses <code>*</code> characters and line breaks.</li>
+<li>Shape packing always uses integer division.</li>
+</ul>
+<hr />
+<p>You may now continue to <strong>Examples</strong> or <strong>Usage</strong> for practical demonstrations.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": [], "search": "../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      
+    
+  </body>
+</html>
