@@ -1,79 +1,144 @@
-# Polygon Area Calculator
+# 📐 Polygon Area Calculator
 
-## Overview
-This project implements a Polygon Area Calculator using object-oriented programming in Python. It includes two classes: `Rectangle` and `Square`, where `Square` is a subclass of `Rectangle`. The calculator can compute various properties of rectangles and squares, including area, perimeter, diagonal length, and visual representation.
+A modern, object-oriented Python utility for computing geometric properties of rectangles and squares — including area, perimeter, diagonal length, ASCII drawings, and shape packing calculations.  
+Clean, simple, highly extensible, and fully documented.
 
-## Features
-- **Rectangle Class**:
-  - Initialize with width and height
-  - Methods: set_width, set_height, get_area, get_perimeter, get_diagonal, get_picture, get_amount_inside
-  - String representation: `Rectangle(width=x, height=y)`
-- **Square Class**:
-  - Subclass of Rectangle
-  - Initialize with a single side length
-  - Additional method: set_side
-  - Overrides set_width and set_height to maintain equal sides
-  - String representation: `Square(side=x)`
-- **Functionality**:
-  - Calculate area (width * height)
-  - Calculate perimeter (2 * width + 2 * height)
-  - Calculate diagonal length using Pythagorean theorem
-  - Generate a string-based picture using '*' characters
-  - Determine how many times one shape can fit inside another
-  - Handle edge cases (e.g., shapes too large for picture representation)
+---
 
-## Installation
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/thesoulseizure/polygon-area-calculator.git
-   ```
-2. Navigate to the project directory:
-   ```bash
-   cd polygon-area-calculator
-   ```
-3. Ensure Python 3.x is installed:
-   ```bash
-   python --version
-   ```
+## 🔖 Badges
 
-## Usage
-Here's an example of how to use the classes:
+![Tests](https://img.shields.io/badge/tests-passing-brightgreen?logo=pytest)
+![Docs](https://img.shields.io/badge/docs-MkDocs%20Material-blue?logo=markdown)
+![Deployed](https://img.shields.io/badge/deployed-GitHub%20Pages-brightgreen?logo=github)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
-```python
-# Create a rectangle
-rect = Rectangle(10, 5)
-print(rect.get_area())  # Output: 50
-rect.set_height(3)
-print(rect.get_perimeter())  # Output: 26
-print(rect)  # Output: Rectangle(width=10, height=3)
-print(rect.get_picture())  # Output: **********\n**********\n**********\n
+---
 
-# Create a square
-sq = Square(9)
-print(sq.get_area())  # Output: 81
-sq.set_side(4)
-print(sq.get_diagonal())  # Output: 5.656854249492381
-print(sq)  # Output: Square(side=4)
-print(sq.get_picture())  # Output: ****\n****\n****\n****\n
+## 🚀 Features
 
-# Check how many squares fit in a rectangle
-rect.set_height(8)
-rect.set_width(16)
-print(rect.get_amount_inside(sq))  # Output: 8
+### 🟦 Rectangle Class
+- Compute **area**, **perimeter**, **diagonal**
+- Generate ASCII pictures (`get_picture`)
+- Measure how many shapes fit inside (`get_amount_inside`)
+- Supports dynamic width & height updates
+- Clean repr: `Rectangle(width=10, height=5)`
+
+### 🟥 Square Class
+- Inherits from `Rectangle`
+- Always maintains equal sides
+- Setter methods are overridden (`set_side`, `set_width`, `set_height`)
+- Clean repr: `Square(side=5)`
+
+---
+
+## 📦 Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/TheComputationalCore/Polygon-Area-Calculator.git
+cd Polygon-Area-Calculator
+pip install .
 ```
 
-## Testing
-The code has been tested to meet the following requirements:
-1. Square is a subclass of Rectangle
-2. Square and Rectangle are distinct classes
-3. Square objects are instances of both Square and Rectangle
-4. Correct string representations for Rectangle and Square
-5. Accurate calculations for area, perimeter, and diagonal
-6. Proper picture representation with '*' characters
-7. Correct handling of shapes too large for picture (>50)
-8. Accurate counting of shapes fitting inside another
+---
 
-To run tests, you can use the example code above in a Python environment. Open the browser console (F12) to see verbose test output if running in a compatible environment.
+## 📘 Usage Example
 
-## Contributing
-Contributions are welcome! Please fork the repository and submit a pull request with your changes. Ensure that your code follows the existing style and passes all tests.
+```python
+from polygon_calculator import Rectangle, Square
+
+rect = Rectangle(10, 5)
+print(rect.get_area())        # 50
+print(rect.get_perimeter())   # 30
+print(rect.get_diagonal())    # 11.18
+print(rect.get_picture())
+
+sq = Square(8)
+print(sq.get_area())          # 64
+sq.set_side(4)
+print(sq.get_diagonal())      # 5.66
+print(sq.get_picture())
+
+rect.set_width(16)
+rect.set_height(8)
+print(rect.get_amount_inside(sq))  # 8
+```
+
+---
+
+## 📊 Example Picture Output
+
+```
+**********
+**********
+**********
+**********
+**********
+```
+
+---
+
+## 🖥️ Command Line Interface (CLI)
+
+Run help:
+
+```bash
+polygon-calculator --help
+```
+
+Example:
+
+```bash
+polygon-calculator --rectangle 10 5
+polygon-calculator --square 7
+```
+
+---
+
+## 📚 Documentation
+
+Full documentation is available at:
+
+👉 https://thecomputationalcore.github.io/Polygon-Area-Calculator/
+
+Documentation includes:
+
+- Usage Guide  
+- API Reference  
+- CLI Guide  
+- Examples  
+
+---
+
+## 🧪 Running Tests
+
+```bash
+pytest -q
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome!  
+See **CONTRIBUTING.md** for full workflow and guidelines.
+
+---
+
+## 🔐 Security
+
+Found a security issue?  
+Email us at:
+
+📧 dineshchandra962@gmail.com
+
+More details in **SECURITY.md**
+
+---
+
+## 📄 License
+
+This project is licensed under the **MIT License**.
+
+
