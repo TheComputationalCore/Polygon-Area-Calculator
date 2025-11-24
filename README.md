@@ -129,9 +129,10 @@ See **CONTRIBUTING.md** for full workflow and guidelines.
 ## 🔐 Security
 
 Found a security issue?  
-Email us at:
+## ✉️ Contact
 
-📧 dineshchandra962@gmail.com
+**Dinesh Chandra — TheComputationalCore**  
+- GitHub: https://github.com/TheComputationalCore 
 
 More details in **SECURITY.md**
 
